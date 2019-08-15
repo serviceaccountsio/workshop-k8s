@@ -94,34 +94,10 @@ app.get('/', function (req, res) {
   }
 });
 
-app.get("/ap/v1/getgeo", function (req, res, next) => {
- res.json(["Tonio","Lisa","Michael","Ginger","Food"]);
-});
 
-/*
-app.get("/api/v1/getgeo/:zip", (req, res, next) => {
- 
-if (req.params.zip.includes("100") {
- res.json(["Newyork","Newyork","Newyork","Newyork","Newyork"]);
-} else {
- res.json(["timbuktu","timbuktu","timbuktu","timbuktu","timbuktu"]);
-}  
-});
-*/
 
 app.get('/pagecount', function (req, res) {
-  // try to initialize the db on every request if it's not already
-  // initialized.
-  if (!db) {
-    initDb(function(err){});
-  }
-  if (db) {
-    db.collection('counts').count(function(err, count ){
-      res.send('{ pageCount: ' + count + '}');
-    });
-  } else {
-    res.send('{ pageCount: -1 }');
-  }
+ res.json(["Tonio","Lisa","Michael","Ginger","Food"]);
 });
 
 // error handling
