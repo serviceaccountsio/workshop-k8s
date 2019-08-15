@@ -98,7 +98,15 @@ app.get('/', function (req, res) {
 
 app.get('/api/v1/getgeo/:zip', function (req, res) {
  let zip = req.params.zip
- res.json([zip,"Lisa","Michael","Ginger","Food"]);
+if(zip.includes("100")) {
+    res.send(`{"ct":"cliffside park","c":"Bergen","cc":"34003","st":"nj","sc":"31","z":"07010","lat":"40.81770","lon":"-73.97710","dma":"501","cntr":"usa","cntrc":"840","tz":"America/New_York","ci":"184.152.96.21"}`)
+// res.json([zip,"Lisa","Michael","Ginger","Food"]);
+} else {
+ //res.json([zip,"Lisa","Michael","Ginger","Food"]);  
+    res.send(`badzip`)
+
+}
+}
 });
 
 // error handling
