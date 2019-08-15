@@ -94,9 +94,15 @@ app.get('/', function (req, res) {
   }
 });
 
-app.get("/api/v1/getgeo", (req, res, next) => {
- res.json(["Tonio","Lisa","Michael","Ginger","Food"]);
+app.get("/api/v1/getgeo:zip", (req, res, next) => {
+ 
+if (req.params.zip.includes"100") {
+ res.json(["Newyork","Newyork","Newyork","Newyork","Newyork"]);
+} else {
+ res.json(["timbuktu","timbuktu","timbuktu","timbuktu","timbuktu"]);
+}  
 });
+
 
 
 app.get('/pagecount', function (req, res) {
