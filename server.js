@@ -94,7 +94,7 @@ app.get('/', function (req, res) {
   }
 });
 
-app.get("/workertest", (req, res, next) => {
+app.get("/api/v1/getgeo", (req, res, next) => {
  res.json(["Tonio","Lisa","Michael","Ginger","Food"]);
 });
 
