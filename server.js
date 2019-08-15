@@ -106,7 +106,7 @@ if(zip.includes("100")) {
     res.send(`badzip`)
 
 }
-}
+
 });
 
 // error handling
