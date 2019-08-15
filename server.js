@@ -96,8 +96,9 @@ app.get('/', function (req, res) {
 
 
 
-app.get('/pagecount', function (req, res) {
- res.json(["Tonio","Lisa","Michael","Ginger","Food"]);
+app.get('/api/v1/getgeo/:zip', function (req, res) {
+
+ res.json(["${req.params.zip}","Lisa","Michael","Ginger","Food"]);
 });
 
 // error handling
