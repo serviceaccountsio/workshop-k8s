@@ -97,8 +97,8 @@ app.get('/', function (req, res) {
 
 
 app.get('/api/v1/getgeo/:zip', function (req, res) {
-
- res.json(["${req.params.zip}","Lisa","Michael","Ginger","Food"]);
+ let zip = req.params.zip
+ res.json([zip,"Lisa","Michael","Ginger","Food"]);
 });
 
 // error handling
